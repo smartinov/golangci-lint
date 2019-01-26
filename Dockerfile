@@ -1,4 +1,4 @@
-FROM golangci/golangci-lint
+FROM golangci/golangci-lint:latest
 
 LABEL repository="https://github.com/actions-contrib/golangci-lint"
 LABEL homepage="https://github.com/actions-contrib/golangci-lint"
@@ -9,5 +9,4 @@ LABEL "com.github.actions.description"="Wraps the GolangCI-Lint CLI to enable co
 LABEL "com.github.actions.icon"="shield"
 LABEL "com.github.actions.color"="blue"
 
-ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "golangci-lint" ]

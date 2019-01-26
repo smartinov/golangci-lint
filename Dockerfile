@@ -1,4 +1,4 @@
-FROM golangci/golangci-lint:1.13
+FROM golangci/golangci-lint
 
 LABEL repository="https://github.com/actions-contrib/golangci-lint"
 LABEL homepage="https://github.com/actions-contrib/golangci-lint"

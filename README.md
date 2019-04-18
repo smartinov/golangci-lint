@@ -11,10 +11,10 @@ An example workflow to test and build follows:
 ```hcl
 workflow "Lint" {
   on = "push"
-  resolves = ["GolangCI-Lint"]
+  resolves = ["Lint"]
 }
 
-action "GolangCI-Lint" {
+action "Lint" {
   uses = "actions-contrib/golangci-lint@master"
   args = "run"
 }
@@ -24,8 +24,7 @@ action "GolangCI-Lint" {
 
 [MIT]: https://opensource.org/licenses/MIT
 
-`actions-contrib/golangci-lint` is open source software released under the
-[MIT license][MIT].
+This project is open source software released under the [MIT license][MIT].
 
 As with all Docker images, these likely also contain other software which may be
 under other licenses (such as Bash, etc from the base distribution, along with

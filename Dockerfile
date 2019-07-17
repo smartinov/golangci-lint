@@ -9,4 +9,6 @@ LABEL "com.gi thub.actions.description"="Wraps the golangci-lint tool and runs i
 LABEL "com.github.actions.icon"="shield"
 LABEL "com.github.actions.color"="blue"
 
-ENTRYPOINT ["golangci-lint"]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]

@@ -16,9 +16,16 @@ workflow "Lint" {
 
 action "Lint" {
   uses = "actions-contrib/golangci-lint@master"
-  args = "run"
+  args = ["run","--new-from-rev=HEAD~"]
+  env={
+    PROJECT_PATH = "./backend"
+  }
 }
 ```
+
+## Configuration
+
+PROJECT_PATH - specifies the path from which the golangci-lint will be run
 
 ## License
 
